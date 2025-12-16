@@ -22,5 +22,5 @@ OOP (Classes & Objects)
 
 Command Line Interface
 
-🔹 How to Run
+🔹 How to Run:
 python coffee_order.py
