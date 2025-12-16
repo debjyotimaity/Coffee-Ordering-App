@@ -49,7 +49,14 @@ def main():
         Coffee("Latte", 3.5),
         Coffee("Cappuccino", 3.0),
         Coffee("Americano", 2.0),
-    ]
+        Coffee("Mocha", 3.5),
+        Coffee("Macchiato", 3.0),
+        Coffee("Iced Latte", 3.5),
+        Coffee("Hot Chocolate", 3.0),
+        Coffee("Flat White", 2.5),
+        Coffee("Cold Coffee", 2.0)
+
+        ]
     order = Order() # Corrected: Call the class constructor
 
     # User transaction
@@ -57,18 +64,18 @@ def main():
         print("\n-----Coffee Menu-----")
         for i, coffee in enumerate(menu, 1):
             print(f"{i}. {coffee.name} - ${coffee.price}")
-        print("5. View Order") # Corrected indentation
-        print("6. Checkout")   # Corrected indentation
-        print("7. Exit")       # Corrected indentation
+        print("11. View Order") # Corrected to match new options
+        print("12. Checkout")   # Corrected to match new options
+        print("13. Exit")       # Corrected to match new options
 
         choice = input("Choose an option: ")
-        if choice in ['1', '2', '3', '4']:
+        if choice in ['1', '2', '3', '4','5','6','7','8','9','10']:
             order.add_item(menu[int(choice) - 1])
-        elif choice == '5': # Corrected indentation
+        elif choice == '11': # Corrected indentation and option number
             order.show_order()
-        elif choice == '6': # Corrected indentation
+        elif choice == '12': # Corrected indentation and option number
             order.checkout() # Corrected: Typo 'checout' to 'checkout'
-        elif choice == '7': # Corrected indentation
+        elif choice == '13': # Corrected indentation and option number
             print("Thanks for visiting. Goodbye!")
             break
         else: # Corrected indentation to match if/elif
